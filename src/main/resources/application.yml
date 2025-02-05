@@ -1,0 +1,39 @@
+# 服务端口号，默认80
+server:
+  port: 8866
+spring:
+  # 服务名称
+  application:
+    name: springboot-test
+
+# Knife4j配置
+knife4j:
+  # 开启增强配置
+  enable: true
+  #开启Basic登录认证功能
+  basic:
+    enable: true
+    # Basic认证用户名
+    username: admin
+    # Basic认证密码
+    password: 123456
+  openapi:
+    title: 官方文档
+    description: "官方文档"
+    email: 515361725@qq.com
+    concat: 程序员  # 作者
+    url: https://xiaofucode.com
+    version: v1.0 # 版本号
+    license: Apache 2.0
+    license-url: https://fire100.top
+    terms-of-service-url: https://fire100.top #API服务条款
+    # API分组配置
+    group:
+      user:
+        group-name: 用户管理 # 组名
+        api-rule: package # 扫描规则，是根据包路径还是请求路径
+        api-rule-resources: # 扫描的资源
+          - com.demo.controller
+env101:
+  var1: var1-公众号：程序员小富
+  var2: var2-公众号：程序员小富

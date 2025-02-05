@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.example</groupId>
+  <artifactId>demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>demo</name>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.6.0</version>
+    <relativePath/> <!-- lookup parent from repository -->
+    <!--
+    父项目的父项目，用来管理Spring Boot应用所有依赖版本
+    <parent>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-dependencies</artifactId>
+         <version>2.0.3.RELEASE</version>
+         <relativePath>../../spring-boot-dependencies</relativePath>
+     </parent>
+     -->
+  </parent>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+  </properties>
+
+  <dependencies>
+    <!-- 启动器
+         Spring boot将所有的功能场景都抽取出来，做成了一个个的starter(启动器)，
+         只需要在项目里引入这些starter，相关场景的所有依赖都会导入进来。
+
+        spring-boot-starter：spring boot场景启动器
+                        web:自动导入web模块正常运行所依赖的组件
+
+    -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.24</version> <!-- 可以替换为最新版本 -->
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>cn.hutool</groupId>
+      <artifactId>hutool-all</artifactId>
+      <version>5.8.16</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>2.7.6</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.xiaoymin</groupId>
+      <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
+      <version>4.3.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba.fastjson2</groupId>
+      <artifactId>fastjson2</artifactId>
+      <version>2.0.54</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>easyexcel</artifactId>
+      <version>4.0.3</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>2.6.0</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
